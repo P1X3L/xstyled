@@ -1,23 +1,13 @@
 /* eslint-disable no-continue, no-loop-func, no-cond-assign */
-import { StyledComponent, DefaultTheme } from 'styled-components'
 import { scStyled } from './scStyled'
-import { StyleGenerator, StyleGeneratorProps } from '@xstyled/system'
-import { createBaseStyled } from './createStyled'
+import { StyleGenerator } from '@xstyled/system'
+import { createBaseStyled, XStyled } from './createStyled'
 import { createCssFunction } from './createCssFunction'
 
 type JSXElementKeys = keyof JSX.IntrinsicElements
 
-type SafeIntrinsicElement<T extends keyof JSX.IntrinsicElements> = (
-  props: Omit<JSX.IntrinsicElements[T], 'color'>,
-) => React.ReactElement<any, T>
-
 export type X<TGen extends StyleGenerator> = {
-  [Key in JSXElementKeys]: StyledComponent<
-    SafeIntrinsicElement<Key>,
-    DefaultTheme,
-    StyleGeneratorProps<TGen>,
-    'color'
-  >
+  [Key in JSXElementKeys]: XStyled<TGen>
 }
 
 export const createX = <TGen extends StyleGenerator>(

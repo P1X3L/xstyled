@@ -1,14 +1,19 @@
 /* eslint-disable no-continue, no-loop-func, no-cond-assign */
+import { css as scCss, Interpolation } from 'styled-components'
 import {
-  css as scCss,
-  FlattenSimpleInterpolation,
-  ThemedCssFunction,
-} from 'styled-components'
-import { StyleGenerator, Theme } from '@xstyled/system'
+  Styles,
+  NoInfer,
+  RuleSet,
+  BaseObject,
+} from 'styled-components/dist/types'
+import { StyleGenerator } from '@xstyled/system'
 import { flattenStrings } from '@xstyled/util'
 import { createTransform } from '@xstyled/core'
 
-export type XCSSFunction = ThemedCssFunction<Theme>
+export type XCSSFunction = <Props extends object = BaseObject>(
+  styles: Styles<NoInfer<Props>>,
+  ...interpolations: Interpolation<NoInfer<Props>>[]
+) => RuleSet<NoInfer<Props>>
 
 export const createCssFunction = <TGen extends StyleGenerator>(
   generator: TGen,
@@ -17,6 +22,6 @@ export const createCssFunction = <TGen extends StyleGenerator>(
   return ((...args: Parameters<XCSSFunction>) => {
     const scCssArgs = scCss(...args)
     const flattenedArgs = flattenStrings(scCssArgs as any[])
-    return flattenedArgs.map(transform) as FlattenSimpleInterpolation
+    return flattenedArgs.map(transform) as Interpolation<any>
   }) as XCSSFunction
 }

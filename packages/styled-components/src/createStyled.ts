@@ -1,18 +1,16 @@
 /* eslint-disable no-continue, no-loop-func, no-cond-assign */
-import type { ElementType } from 'react'
 import { BoxElements } from '@xstyled/core'
 import { string } from '@xstyled/util'
+import isPropValid from '@emotion/is-prop-valid'
 import { StyleGenerator, StyleGeneratorProps, Theme } from '@xstyled/system'
-import {
-  StyledConfig,
-  ThemedBaseStyledInterface,
-  ThemedStyledFunction,
-} from 'styled-components'
+import { StyledOptions } from 'styled-components'
 import { scStyled } from './scStyled'
 import { createCssFunction, XCSSFunction } from './createCssFunction'
+import { Styled } from 'styled-components/dist/constructors/constructWithOptions'
+import { StyledTarget } from 'styled-components/dist/types'
 
 const getCreateStyle = (
-  baseCreateStyle: ThemedStyledFunction<any, any>,
+  baseCreateStyle: Styled<'web', any, any>,
   css: XCSSFunction,
   generator?: StyleGenerator,
 ) => {
@@ -21,47 +19,31 @@ const getCreateStyle = (
     baseCreateStyle`${css(...args)}${generator}`
   createStyle.attrs = (attrs: Parameters<typeof baseCreateStyle.attrs>[0]) =>
     getCreateStyle(baseCreateStyle.attrs(attrs), css, generator)
-  createStyle.withConfig = (config: StyledConfig<any>) =>
+  createStyle.withConfig = (config: StyledOptions<'web', object>) =>
     getCreateStyle(baseCreateStyle.withConfig(config), css, generator)
   return createStyle
 }
 
 type BoxStyledTags<TProps extends object> = {
-  [Key in keyof BoxElements]: ThemedStyledFunction<
-    BoxElements[Key],
-    Theme,
-    TProps
-  >
+  [Key in keyof BoxElements]: Styled<'web', BoxElements[Key], Theme, TProps>
 }
 
-export interface XStyled<TGen extends StyleGenerator>
-  extends ThemedBaseStyledInterface<Theme>,
-    BoxStyledTags<StyleGeneratorProps<TGen>> {}
+export type XStyled<TGen extends StyleGenerator> = typeof scStyled &
+  BoxStyledTags<StyleGeneratorProps<TGen>>
 
 const createShouldForwardProp = (
   generator: StyleGenerator,
 ): ((
   prop: string | number | symbol,
-  defaultValidatorFn: (prop: string | number | symbol) => boolean,
-  elementToBeCreated?: ElementType,
+  elementToBeCreated: StyledTarget<'web'>,
 ) => boolean) => {
   const propSet = new Set<string>(generator.meta.props)
-  return (
-    prop: string | number | symbol,
-    defaultValidatorFn: (prop: string | number | symbol) => boolean,
-    elementToBeCreated?: ElementType,
-  ) => {
+  return (prop: string | number | symbol, elementToBeCreated) => {
     if (string(prop) && propSet.has(prop)) {
       return false
     }
-    if (typeof elementToBeCreated === 'string') {
-      // We must test elementToBeCreated so we can pass through props for <x.div
-      // as={Component} />. However elementToBeCreated isn't available until
-      // styled-components 5.2.4 or 6, and in the meantime will be undefined.
-      // This means that HTML elements could get unwanted props, but ultimately
-      // this is a bug in the caller, because why are they passing unwanted
-      // props?
-      return defaultValidatorFn(prop)
+    if (string(prop) && typeof elementToBeCreated === 'string') {
+      return isPropValid(prop)
     }
     return true
   }
