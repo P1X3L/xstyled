@@ -14,13 +14,14 @@
     "prepublishOnly": "npm run reset && npm run build"
   },
   "homepage": "https://xstyled.dev",
-  "repository": "https://github.com/gregberge/xstyled/tree/master/packages/babel-preset-emotion-css-prop",
+  "repository": "https://github.com/P1X3L/xstyled/tree/core-upgrade-styled-components-v6/packages/babel-preset-emotion-css-prop",
   "funding": {
     "type": "github",
     "url": "https://github.com/sponsors/gregberge"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/@wttj"
   },
   "dependencies": {
     "@babel/plugin-transform-react-jsx": "^7.19.0",
@@ -29,5 +30,6 @@
   },
   "peerDependencies": {
     "@babel/core": "^7.0.0"
-  }
+  },
+  "gitHead": "fa8fe0d037528c195c15f44d6a06ce2f0f278fa2"
 }

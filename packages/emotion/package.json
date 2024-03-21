@@ -29,10 +29,11 @@
     "prepublishOnly": "npm run reset && npm run build"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/@wttj"
   },
   "homepage": "https://xstyled.dev",
-  "repository": "https://github.com/gregberge/xstyled/tree/master/packages/emotion",
+  "repository": "https://github.com/P1X3L/xstyled/tree/core-upgrade-styled-components-v6/packages/emotion",
   "funding": {
     "type": "github",
     "url": "https://github.com/sponsors/gregberge"

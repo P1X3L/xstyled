@@ -30,13 +30,14 @@
     "prepublishOnly": "npm run reset && npm run build"
   },
   "homepage": "https://xstyled.dev",
-  "repository": "https://github.com/gregberge/xstyled/tree/master/packages/system",
+  "repository": "https://github.com/P1X3L/xstyled/tree/core-upgrade-styled-components-v6/packages/system",
   "funding": {
     "type": "github",
     "url": "https://github.com/sponsors/gregberge"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/@wttj"
   },
   "dependencies": {
     "@xstyled/util": "^3.7.0",
