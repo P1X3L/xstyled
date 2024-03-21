@@ -1,5 +1,5 @@
-import { obj, string, func, cascade } from '@xstyled/util'
-import { ITheme } from '@xstyled/system'
+import { obj, string, func, cascade } from '@wttj/xstyled-util'
+import { ITheme } from '@wttj/xstyled-system'
 
 const join = (...args: (string | undefined)[]): string =>
   args.filter(Boolean).join('.')

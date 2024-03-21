@@ -5,7 +5,7 @@ import {
   x,
   defaultTheme,
   useTheme,
-} from '@xstyled/styled-components'
+} from '@wttj/xstyled-styled-components'
 import {
   ScreenContainer,
   FeatureSection,

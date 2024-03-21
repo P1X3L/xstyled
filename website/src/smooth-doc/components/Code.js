@@ -7,7 +7,7 @@ import styled, {
   x,
   ThemeProvider,
   defaultTheme,
-} from '@xstyled/styled-components'
+} from '@wttj/xstyled-styled-components'
 import Editor from 'react-simple-code-editor'
 import { LiveProvider, LiveError, LivePreview, LiveContext } from 'react-live'
 import { Highlight } from '../../components/Prism'

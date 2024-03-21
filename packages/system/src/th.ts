@@ -1,4 +1,4 @@
-import { is, getThemeValue } from '@xstyled/util'
+import { is, getThemeValue } from '@wttj/xstyled-util'
 import {
   getAngle,
   getAnimation,
@@ -57,7 +57,7 @@ interface ThGetters {
   transitionProperty: typeof getTransitionProperty
   zIndex: typeof getZIndex
 }
-interface Th extends ThemeGetter, ThGetters {}
+interface Th extends ThemeGetter, ThGetters { }
 
 export const th = <Th>((path, defaultValue?) => (props) => {
   const value = getThemeValue(props, path)
@@ -65,34 +65,34 @@ export const th = <Th>((path, defaultValue?) => (props) => {
   if (is(defaultValue)) return defaultValue
   return path
 })
-;[
-  getAngle,
-  getAnimation,
-  getBorder,
-  getBorderColor,
-  getBorderStyle,
-  getBorderWidth,
-  getColor,
-  getDuration,
-  getFont,
-  getFontSize,
-  getFontWeight,
-  getInset,
-  getLetterSpacing,
-  getLineHeight,
-  getPercent,
-  getPx,
-  getRadius,
-  getRingWidth,
-  getShadow,
-  getSize,
-  getSpace,
-  getTimingFunction,
-  getTransform,
-  getTransition,
-  getTransitionProperty,
-  getZIndex,
-].forEach((themeGetter) => {
-  // @ts-ignore
-  th[themeGetter.meta.name] = themeGetter
-})
+  ;[
+    getAngle,
+    getAnimation,
+    getBorder,
+    getBorderColor,
+    getBorderStyle,
+    getBorderWidth,
+    getColor,
+    getDuration,
+    getFont,
+    getFontSize,
+    getFontWeight,
+    getInset,
+    getLetterSpacing,
+    getLineHeight,
+    getPercent,
+    getPx,
+    getRadius,
+    getRingWidth,
+    getShadow,
+    getSize,
+    getSpace,
+    getTimingFunction,
+    getTransform,
+    getTransition,
+    getTransitionProperty,
+    getZIndex,
+  ].forEach((themeGetter) => {
+    // @ts-ignore
+    th[themeGetter.meta.name] = themeGetter
+  })

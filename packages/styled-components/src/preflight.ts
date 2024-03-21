@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
-import { getPreflightStyles } from '@xstyled/system'
+import { getPreflightStyles } from '@wttj/xstyled-system'
 
 export const Preflight = createGlobalStyle(({ theme }) =>
   getPreflightStyles(theme),

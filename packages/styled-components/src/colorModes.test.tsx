@@ -2,7 +2,7 @@
 import * as React from 'react'
 import '@testing-library/jest-dom/extend-expect'
 import { render, cleanup } from '@testing-library/react'
-import { th } from '@xstyled/system'
+import { th } from '@wttj/xstyled-system'
 import { x, ThemeProvider, ColorModeProvider } from '.'
 
 afterEach(cleanup)

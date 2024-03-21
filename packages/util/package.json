@@ -1,5 +1,5 @@
 {
-  "name": "@xstyled/util",
+  "name": "@wttj/xstyled-util",
   "description": "xstyled common utilities.",
   "version": "3.7.0",
   "sideEffects": false,
@@ -29,6 +29,6 @@
   },
   "publishConfig": {
     "access": "public",
-    "registry": "https://npm.pkg.github.com/@wttj"
+    "registry": "https://npm.pkg.github.com/wttj"
   }
 }

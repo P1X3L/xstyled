@@ -6322,15 +6322,72 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@xstyled/babel-preset-emotion-css-prop@workspace:packages/babel-preset-emotion-css-prop":
+"@wttj/xstyled-babel-preset-emotion-css-prop@workspace:packages/babel-preset-emotion-css-prop":
   version: 0.0.0-use.local
-  resolution: "@xstyled/babel-preset-emotion-css-prop@workspace:packages/babel-preset-emotion-css-prop"
+  resolution: "@wttj/xstyled-babel-preset-emotion-css-prop@workspace:packages/babel-preset-emotion-css-prop"
   dependencies:
     "@babel/plugin-transform-react-jsx": ^7.19.0
     "@emotion/babel-plugin": ^11.10.2
     "@emotion/babel-plugin-jsx-pragmatic": ^0.2.0
   peerDependencies:
     "@babel/core": ^7.0.0
+  languageName: unknown
+  linkType: soft
+
+"@wttj/xstyled-core@^3.8.0, @wttj/xstyled-core@workspace:packages/core":
+  version: 0.0.0-use.local
+  resolution: "@wttj/xstyled-core@workspace:packages/core"
+  dependencies:
+    "@wttj/xstyled-system": ^3.8.0
+    "@wttj/xstyled-util": ^3.7.0
+  languageName: unknown
+  linkType: soft
+
+"@wttj/xstyled-emotion@^3.8.0, @wttj/xstyled-emotion@workspace:packages/emotion":
+  version: 0.0.0-use.local
+  resolution: "@wttj/xstyled-emotion@workspace:packages/emotion"
+  dependencies:
+    "@wttj/xstyled-core": ^3.8.0
+    "@wttj/xstyled-system": ^3.8.0
+    "@wttj/xstyled-util": ^3.7.0
+  peerDependencies:
+    "@emotion/react": ^11.0.0
+    "@emotion/styled": ^11.0.0
+  languageName: unknown
+  linkType: soft
+
+"@wttj/xstyled-prop-types@workspace:packages/prop-types":
+  version: 0.0.0-use.local
+  resolution: "@wttj/xstyled-prop-types@workspace:packages/prop-types"
+  peerDependencies:
+    prop-types: ^15.0.0
+  languageName: unknown
+  linkType: soft
+
+"@wttj/xstyled-styled-components@^3.8.0, @wttj/xstyled-styled-components@workspace:packages/styled-components":
+  version: 0.0.0-use.local
+  resolution: "@wttj/xstyled-styled-components@workspace:packages/styled-components"
+  dependencies:
+    "@wttj/xstyled-core": ^3.8.0
+    "@wttj/xstyled-system": ^3.8.0
+    "@wttj/xstyled-util": ^3.7.0
+  peerDependencies:
+    styled-components: ^4.0.0 || ^5.0.0 || ^6.0.0
+  languageName: unknown
+  linkType: soft
+
+"@wttj/xstyled-system@^3.8.0, @wttj/xstyled-system@workspace:packages/system":
+  version: 0.0.0-use.local
+  resolution: "@wttj/xstyled-system@workspace:packages/system"
+  dependencies:
+    "@wttj/xstyled-util": ^3.7.0
+    csstype: ^3.1.1
+  languageName: unknown
+  linkType: soft
+
+"@wttj/xstyled-util@^3.7.0, @wttj/xstyled-util@workspace:packages/util":
+  version: 0.0.0-use.local
+  resolution: "@wttj/xstyled-util@workspace:packages/util"
   languageName: unknown
   linkType: soft
 
@@ -6344,8 +6401,8 @@ __metadata:
     "@emotion/core": ^11.0.0
     "@emotion/react": ^11.10.4
     "@emotion/styled": ^11.10.4
-    "@xstyled/emotion": ^3.8.0
-    "@xstyled/styled-components": ^3.8.0
+    "@wttj/xstyled-emotion": ^3.8.0
+    "@wttj/xstyled-styled-components": ^3.8.0
     babel-loader: ^8.2.5
     benchmark: ^2.1.4
     emotion-theming: ^11.0.0
@@ -6360,62 +6417,45 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xstyled/core@^3.8.0, @xstyled/core@workspace:packages/core":
-  version: 0.0.0-use.local
-  resolution: "@xstyled/core@workspace:packages/core"
+"@xstyled/core@npm:^3.8.0":
+  version: 3.8.0
+  resolution: "@xstyled/core@npm:3.8.0"
   dependencies:
     "@xstyled/system": ^3.8.0
     "@xstyled/util": ^3.7.0
-  languageName: unknown
-  linkType: soft
+  checksum: 61c79515d98c7a819001521ff67a21d3f18fd5dacd06b2a21f57d36807623d5e6aa1caf678f0a9964e800376b7a7646819025dd0fdf7d5597f82c921e4bef14d
+  languageName: node
+  linkType: hard
 
-"@xstyled/emotion@^3.8.0, @xstyled/emotion@workspace:packages/emotion":
-  version: 0.0.0-use.local
-  resolution: "@xstyled/emotion@workspace:packages/emotion"
-  dependencies:
-    "@xstyled/core": ^3.8.0
-    "@xstyled/system": ^3.8.0
-    "@xstyled/util": ^3.7.0
-  peerDependencies:
-    "@emotion/react": ^11.0.0
-    "@emotion/styled": ^11.0.0
-  languageName: unknown
-  linkType: soft
-
-"@xstyled/prop-types@workspace:packages/prop-types":
-  version: 0.0.0-use.local
-  resolution: "@xstyled/prop-types@workspace:packages/prop-types"
-  peerDependencies:
-    prop-types: ^15.0.0
-  languageName: unknown
-  linkType: soft
-
-"@xstyled/styled-components@^3.6.0, @xstyled/styled-components@^3.8.0, @xstyled/styled-components@workspace:packages/styled-components":
-  version: 0.0.0-use.local
-  resolution: "@xstyled/styled-components@workspace:packages/styled-components"
+"@xstyled/styled-components@npm:^3.6.0":
+  version: 3.8.0
+  resolution: "@xstyled/styled-components@npm:3.8.0"
   dependencies:
     "@xstyled/core": ^3.8.0
     "@xstyled/system": ^3.8.0
     "@xstyled/util": ^3.7.0
   peerDependencies:
-    styled-components: ^4.0.0 || ^5.0.0 || ^6.0.0
-  languageName: unknown
-  linkType: soft
+    styled-components: ^4.0.0 || ^5.0.0
+  checksum: 2c23732adc1ac10d4326374d64f6a9af58c1fde603584d805d6b55748b07c2915d8ec0a3df43a264ace54e149bc020ab15cbb810369c7f2269518eca014194b1
+  languageName: node
+  linkType: hard
 
-"@xstyled/system@^3.8.0, @xstyled/system@workspace:packages/system":
-  version: 0.0.0-use.local
-  resolution: "@xstyled/system@workspace:packages/system"
+"@xstyled/system@npm:^3.8.0":
+  version: 3.8.0
+  resolution: "@xstyled/system@npm:3.8.0"
   dependencies:
     "@xstyled/util": ^3.7.0
     csstype: ^3.1.1
-  languageName: unknown
-  linkType: soft
+  checksum: 96ac87e30f7f5c657c5d6a27ad1eea8e250f3b1e1c262a2a9e48d29a86c196236e8ccdd0e3d25067b8e69fd32aaeded7833ae0f9d5a9e812ca67974ba777bafa
+  languageName: node
+  linkType: hard
 
-"@xstyled/util@^3.7.0, @xstyled/util@workspace:packages/util":
-  version: 0.0.0-use.local
-  resolution: "@xstyled/util@workspace:packages/util"
-  languageName: unknown
-  linkType: soft
+"@xstyled/util@npm:^3.7.0":
+  version: 3.7.0
+  resolution: "@xstyled/util@npm:3.7.0"
+  checksum: d29d89c7febe86761ff1c103b7f63e178b6715e91d29b1da8a8547d9d7bff410d994ab34c20e92db4e4c869493584e9da15cd666920ad60ad6c2790751985f28
+  languageName: node
+  linkType: hard
 
 "@xstyled/website@workspace:website":
   version: 0.0.0-use.local

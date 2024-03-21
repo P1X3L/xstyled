@@ -1,5 +1,5 @@
 /* eslint-disable no-continue, no-loop-func, no-cond-assign */
-import type { StyleGenerator } from '@xstyled/system'
+import type { StyleGenerator } from '@wttj/xstyled-system'
 import { mediaGetters } from './mediaGetters'
 
 // prop name is an ident: word chars, underscore and dash.

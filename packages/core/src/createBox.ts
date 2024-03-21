@@ -1,4 +1,4 @@
-import { system } from '@xstyled/system'
+import { system } from '@wttj/xstyled-system'
 
 export function createBox(): (string | typeof system)[] {
   return [`&&{`, system, `}`]

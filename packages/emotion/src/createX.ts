@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Theme } from '@emotion/react'
 import { StyledComponent } from '@emotion/styled'
-import { StyleGenerator, StyleGeneratorProps } from '@xstyled/system'
+import { StyleGenerator, StyleGeneratorProps } from '@wttj/xstyled-system'
 import { createBaseStyled } from './createStyled'
 import { createCssFunction } from './createCssFunction'
 import { emStyled } from './emStyled'

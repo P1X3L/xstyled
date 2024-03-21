@@ -1,7 +1,7 @@
 import { css as emCss, SerializedStyles, Theme } from '@emotion/react'
 import { CSSInterpolation } from '@emotion/serialize'
-import { StyleGenerator } from '@xstyled/system'
-import { createTransform } from '@xstyled/core'
+import { StyleGenerator } from '@wttj/xstyled-system'
+import { createTransform } from '@wttj/xstyled-core'
 
 const styleToString = (style: any, props: any): any => {
   if (Array.isArray(style))
@@ -48,13 +48,13 @@ export const createCssFunction = <TGen extends StyleGenerator>(
         typeof strings === 'function'
           ? emCss(strings(props))
           : emCss(
-              strings as TemplateStringsArray,
-              ...rawArgs.map((arg) => {
-                // @ts-expect-error
-                if (typeof arg === 'function') return arg(props)
-                return arg
-              }),
-            )
+            strings as TemplateStringsArray,
+            ...rawArgs.map((arg) => {
+              // @ts-expect-error
+              if (typeof arg === 'function') return arg(props)
+              return arg
+            }),
+          )
       return {
         ...emCssArgs,
         styles: styleToString(transform(emCssArgs.styles), props),

@@ -1,6 +1,6 @@
 /* eslint-disable no-continue, no-loop-func, no-cond-assign */
 import { scStyled } from './scStyled'
-import { StyleGenerator } from '@xstyled/system'
+import { StyleGenerator } from '@wttj/xstyled-system'
 import { createBaseStyled, XStyled } from './createStyled'
 import { createCssFunction } from './createCssFunction'
 

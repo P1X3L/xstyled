@@ -1,4 +1,4 @@
-import { StyleGenerator } from '@xstyled/system'
+import { StyleGenerator } from '@wttj/xstyled-system'
 import { createCssFunction, XCSSFunction } from './createCssFunction'
 import { createX, X } from './createX'
 import { createStyled, XStyled } from './createStyled'

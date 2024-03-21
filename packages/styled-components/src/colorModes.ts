@@ -3,7 +3,7 @@ import {
   ThemeContext,
   ThemeProvider,
 } from 'styled-components'
-import { createColorModeProvider, createColorStyles } from '@xstyled/core'
+import { createColorModeProvider, createColorStyles } from '@wttj/xstyled-core'
 
 const ColorModeStyle = createGlobalStyle`${(p: {
   theme: any
@@ -20,4 +20,4 @@ export {
   useColorMode,
   getColorModeInitScriptElement,
   getColorModeInitScriptTag,
-} from '@xstyled/core'
+} from '@wttj/xstyled-core'

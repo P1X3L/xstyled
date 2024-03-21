@@ -1,4 +1,4 @@
-import { system } from '@xstyled/system'
+import { system } from '@wttj/xstyled-system'
 import { createTransform } from './transform'
 
 const props = {

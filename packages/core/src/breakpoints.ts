@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import * as React from 'react'
-import { getScreens, ITheme, Screens } from '@xstyled/system'
+import { getScreens, ITheme, Screens } from '@wttj/xstyled-system'
 
 export function useThemeScreens(theme: ITheme): Screens {
   return getScreens({ theme })

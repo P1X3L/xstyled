@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { CreateStyledComponent, CreateStyled } from '@emotion/styled'
 import { Theme } from '@emotion/react'
-import { StyleGenerator, StyleGeneratorProps } from '@xstyled/system'
-import { BoxElements } from '@xstyled/core'
+import { StyleGenerator, StyleGeneratorProps } from '@wttj/xstyled-system'
+import { BoxElements } from '@wttj/xstyled-core'
 import { createCssFunction, XCSSFunction } from './createCssFunction'
 import { emStyled } from './emStyled'
 
@@ -45,7 +45,7 @@ type BoxStyledTags<TProps extends object> = {
 
 export interface XStyled<TGen extends StyleGenerator>
   extends CreateStyled,
-    BoxStyledTags<StyleGeneratorProps<TGen>> {}
+  BoxStyledTags<StyleGeneratorProps<TGen>> { }
 
 const createShouldForwardProp = (
   generator: StyleGenerator,
@@ -61,8 +61,8 @@ export const createBaseStyled = <TGen extends StyleGenerator>(
 ): XStyled<TGen> => {
   const defaultOptions = generator
     ? {
-        shouldForwardProp: createShouldForwardProp(generator),
-      }
+      shouldForwardProp: createShouldForwardProp(generator),
+    }
     : {}
   return ((component: any, options: any) =>
     getCreateStyle(

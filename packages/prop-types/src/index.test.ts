@@ -1,4 +1,4 @@
-import { space } from '@xstyled/system'
+import { space } from '@wttj/xstyled-system'
 import { getSystemPropTypes } from '.'
 
 describe('#getSystemPropTypes', () => {

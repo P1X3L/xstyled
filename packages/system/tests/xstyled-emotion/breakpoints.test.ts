@@ -1,5 +1,5 @@
 import { matchers } from '@emotion/jest'
-import styled, { css } from '@xstyled/emotion'
+import styled, { css } from '@wttj/xstyled-emotion'
 import { testBreakpoints } from '../common/breakpoints'
 
 expect.extend(matchers)

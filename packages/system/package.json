@@ -1,5 +1,5 @@
 {
-  "name": "@xstyled/system",
+  "name": "@wttj/xstyled-system",
   "description": "xstyled system utilities.",
   "version": "3.8.0",
   "keywords": [
@@ -37,10 +37,10 @@
   },
   "publishConfig": {
     "access": "public",
-    "registry": "https://npm.pkg.github.com/@wttj"
+    "registry": "https://npm.pkg.github.com/wttj"
   },
   "dependencies": {
-    "@xstyled/util": "^3.7.0",
+    "@wttj/xstyled-util": "^3.7.0",
     "csstype": "^3.1.1"
   }
 }

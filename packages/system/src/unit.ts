@@ -1,4 +1,4 @@
-import { num, string, negative, getThemeValue } from '@xstyled/util'
+import { num, string, negative, getThemeValue } from '@wttj/xstyled-util'
 import { CSSScalar, TransformValue } from './types'
 
 interface PxToRemOptions {
@@ -9,8 +9,8 @@ const round = (value: number): number => Math.round(value * 10 ** 4) / 10 ** 4
 
 export const unit =
   (unit: string) =>
-  <T extends CSSScalar>(value: T): string | T =>
-    num(value) && value !== 0 ? `${value}${unit}` : value
+    <T extends CSSScalar>(value: T): string | T =>
+      num(value) && value !== 0 ? `${value}${unit}` : value
 
 export const ms = unit('ms')
 export const px = unit('px')

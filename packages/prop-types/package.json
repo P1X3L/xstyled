@@ -1,5 +1,5 @@
 {
-  "name": "@xstyled/prop-types",
+  "name": "@wttj/xstyled-prop-types",
   "description": "Generate prop-types from xstyled utilities.",
   "version": "3.7.0",
   "keywords": [
@@ -38,7 +38,7 @@
   },
   "publishConfig": {
     "access": "public",
-    "registry": "https://npm.pkg.github.com/@wttj"
+    "registry": "https://npm.pkg.github.com/wttj"
   },
   "peerDependencies": {
     "prop-types": "^15.0.0"

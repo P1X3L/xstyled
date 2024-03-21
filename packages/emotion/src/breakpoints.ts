@@ -3,11 +3,11 @@ import {
   useThemeBreakpoint,
   useThemeUp,
   useThemeDown,
-} from '@xstyled/core'
-import { Screens } from '@xstyled/system'
+} from '@wttj/xstyled-core'
+import { Screens } from '@wttj/xstyled-system'
 import { useTheme } from '@emotion/react'
 
-export { useViewportWidth } from '@xstyled/core'
+export { useViewportWidth } from '@wttj/xstyled-core'
 
 export const useScreens = (): Screens => useThemeScreens(useTheme())
 

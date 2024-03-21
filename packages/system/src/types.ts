@@ -1,5 +1,5 @@
 import * as CSS from 'csstype'
-import type { ITheme, Props } from '@xstyled/util'
+import type { ITheme, Props } from '@wttj/xstyled-util'
 
 export type { ITheme, Props }
 
@@ -49,7 +49,7 @@ export interface ThemeNamespace {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface Theme extends ITheme {}
+export interface Theme extends ITheme { }
 
 export type NamespaceType<T> = T extends ReadonlyArray<unknown>
   ? number
@@ -121,10 +121,10 @@ export interface TransformValue {
  */
 export type SynthesizedPath<T extends Record<string, unknown>> = {
   [P in keyof T]: P extends string
-    ? T[P] extends Record<string, unknown>
-      ? `${P}.${SynthesizedPath<T[P]>}`
-      : P
-    : never
+  ? T[P] extends Record<string, unknown>
+  ? `${P}.${SynthesizedPath<T[P]>}`
+  : P
+  : never
 }[keyof T]
 
 export type ThemeNamespaceValue<K extends string, T extends ITheme> =

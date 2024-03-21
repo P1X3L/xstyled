@@ -1,7 +1,7 @@
 /* eslint-disable prefer-rest-params */
 import * as React from 'react'
 import { jsx as emJsx } from '@emotion/react'
-import { StyleGenerator } from '@xstyled/system'
+import { StyleGenerator } from '@wttj/xstyled-system'
 import { createCx } from './createCx'
 
 export type XJsx = typeof emJsx

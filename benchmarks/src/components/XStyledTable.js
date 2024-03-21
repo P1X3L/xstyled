@@ -1,5 +1,5 @@
 import * as React from 'react'
-import styled from '@xstyled/styled-components'
+import styled from '@wttj/xstyled-styled-components'
 
 const Table = styled('div')`
   display: table;

@@ -1,4 +1,4 @@
-import { num } from '@xstyled/util'
+import { num } from '@wttj/xstyled-util'
 import { CSSScalar } from './types'
 import { remPx, rpx } from './unit'
 

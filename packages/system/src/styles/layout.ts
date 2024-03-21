@@ -1,5 +1,5 @@
 import * as CSS from 'csstype'
-import { obj } from '@xstyled/util'
+import { obj } from '@wttj/xstyled-util'
 import {
   style,
   compose,
@@ -167,21 +167,21 @@ export const objectFit = style<ObjectFitProps>({
 
 export interface LayoutProps<T extends ITheme = Theme>
   extends DisplayProps<T>,
-    FloatProps<T>,
-    BoxSizingProps<T>,
-    ContainerProps<T>,
-    OverflowProps<T>,
-    OverflowXProps<T>,
-    OverflowYProps<T>,
-    PositionProps<T>,
-    ZIndexProps<T>,
-    TopProps<T>,
-    RightProps<T>,
-    BottomProps<T>,
-    LeftProps<T>,
-    VisibilityProps<T>,
-    OverscrollBehaviorProps<T>,
-    ObjectFitProps<T> {}
+  FloatProps<T>,
+  BoxSizingProps<T>,
+  ContainerProps<T>,
+  OverflowProps<T>,
+  OverflowXProps<T>,
+  OverflowYProps<T>,
+  PositionProps<T>,
+  ZIndexProps<T>,
+  TopProps<T>,
+  RightProps<T>,
+  BottomProps<T>,
+  LeftProps<T>,
+  VisibilityProps<T>,
+  OverscrollBehaviorProps<T>,
+  ObjectFitProps<T> { }
 export const layout = compose<LayoutProps>(
   boxSizing,
   display,

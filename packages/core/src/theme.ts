@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import { ThemeGetter, ThemeGetterType, CSSScalar } from '@xstyled/system'
+import { ThemeGetter, ThemeGetterType, CSSScalar } from '@wttj/xstyled-system'
 
 export const createUseGetter =
   <T extends ThemeGetter>(getter: T, useTheme: () => object) =>

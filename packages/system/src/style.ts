@@ -10,7 +10,7 @@ import {
   merge,
   assign,
   cascade,
-} from '@xstyled/util'
+} from '@wttj/xstyled-util'
 import { getCachedVariants, PropsVariants } from './theme'
 import { getCache } from './cache'
 import {
@@ -80,8 +80,8 @@ export const themeGetter = <T = any>({
             value === true
               ? 'default'
               : string(value) || num(value)
-              ? value
-              : null
+                ? value
+                : null
           if (is(path)) {
             const fromTheme = getThemeValue(props, path, variants)
             res = Array.isArray(fromTheme)
@@ -144,14 +144,14 @@ export const createStyleGenerator = <TProps extends Props = {}>({
   }
   generator.apply =
     (values: { [key: string]: unknown }) =>
-    ({ theme }: Props<Theme>) =>
-      generator({ theme, ...values })
+      ({ theme }: Props<Theme>) =>
+        generator({ theme, ...values })
   return generator
 }
 
 export const reduceVariants = <T extends Props>(
   props: T,
-  values: { [key: string]: unknown; [key: number]: unknown },
+  values: { [key: string]: unknown;[key: number]: unknown },
   getStyle: (value: any) => CSSObject | null | undefined,
 ): CSSObject => {
   const cache = getCache<PropsVariants<T>>(props.theme, '__variants')
@@ -280,14 +280,14 @@ export function compose(...generators: any[]): any {
 
 const getMixinFromCSSProperties =
   (properties?: string | string[]): Mixin =>
-  (value) => {
-    if (string(properties)) return { [properties]: value } as CSSObject
-    const style = {} as CSSObject
-    for (const key in properties) {
-      style[properties[key as unknown as number]] = value as CSSObject
+    (value) => {
+      if (string(properties)) return { [properties]: value } as CSSObject
+      const style = {} as CSSObject
+      for (const key in properties) {
+        style[properties[key as unknown as number]] = value as CSSObject
+      }
+      return style
     }
-    return style
-  }
 
 const getMixinFromCSSOption = (css: CSSOption): Mixin => {
   if (func(css)) return css
@@ -311,12 +311,12 @@ export const style = <TProps extends Props = {}>({
     (string(css)
       ? [css]
       : Array.isArray(css)
-      ? css
-      : string(prop)
-      ? [prop]
-      : Array.isArray(prop)
-      ? prop
-      : [])
+        ? css
+        : string(prop)
+          ? [prop]
+          : Array.isArray(prop)
+            ? prop
+            : [])
 
   if (Array.isArray(prop)) {
     const mixin = css ? getMixinFromCSSOption(css) : css
@@ -333,9 +333,9 @@ export const style = <TProps extends Props = {}>({
   const getStyle = getStyleFactory(prop as string, mixin, getter)
   const cssGetters = getter
     ? cssProps.reduce((getters, cssProp) => {
-        getters[dasherize(cssProp)] = getter
-        return getters
-      }, {} as { [key: string]: ThemeGetter })
+      getters[dasherize(cssProp)] = getter
+      return getters
+    }, {} as { [key: string]: ThemeGetter })
     : {}
   const generator = createStyleGenerator({ getStyle, props, cssGetters })
   generators.push(generator)

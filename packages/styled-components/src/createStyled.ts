@@ -1,8 +1,12 @@
 /* eslint-disable no-continue, no-loop-func, no-cond-assign */
-import { BoxElements } from '@xstyled/core'
-import { string } from '@xstyled/util'
+import { BoxElements } from '@wttj/xstyled-core'
+import { string } from '@wttj/xstyled-util'
 import isPropValid from '@emotion/is-prop-valid'
-import { StyleGenerator, StyleGeneratorProps, Theme } from '@xstyled/system'
+import {
+  StyleGenerator,
+  StyleGeneratorProps,
+  Theme,
+} from '@wttj/xstyled-system'
 import { StyledOptions } from 'styled-components'
 import { scStyled } from './scStyled'
 import { createCssFunction, XCSSFunction } from './createCssFunction'

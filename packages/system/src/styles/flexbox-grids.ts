@@ -1,5 +1,5 @@
 import { SystemProp, ITheme, Props, Theme } from '../types'
-import { obj, is } from '@xstyled/util'
+import { obj, is } from '@wttj/xstyled-util'
 import { style, createStyleGenerator, reduceVariants, compose } from '../style'
 import { getPercent } from './units'
 
@@ -82,5 +82,5 @@ export const col = createStyleGenerator<ColProps>({
 
 export interface FlexboxGridsProps<T extends ITheme = Theme>
   extends RowProps<T>,
-    ColProps<T> {}
+  ColProps<T> { }
 export const flexboxGrids = compose<FlexboxGridsProps>(row, col)

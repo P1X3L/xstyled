@@ -2,7 +2,7 @@
 /* eslint-disable react/no-danger */
 /* eslint-env browser */
 import * as React from 'react'
-import { Colors } from '@xstyled/system'
+import { Colors } from '@wttj/xstyled-system'
 import {
   toCustomPropertiesDeclarations,
   toCustomPropertiesReferences,

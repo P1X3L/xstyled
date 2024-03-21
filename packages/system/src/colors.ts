@@ -1,4 +1,4 @@
-import { string } from '@xstyled/util'
+import { string } from '@wttj/xstyled-util'
 import { ThemeAlias, Colors } from './types'
 import { th } from './th'
 

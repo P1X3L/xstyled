@@ -1,5 +1,5 @@
 {
-  "name": "@xstyled/emotion",
+  "name": "@wttj/xstyled-emotion",
   "description": "A utility-first CSS-in-JS framework built for React (Emotion bindings).",
   "version": "3.8.0",
   "keywords": [
@@ -30,7 +30,7 @@
   },
   "publishConfig": {
     "access": "public",
-    "registry": "https://npm.pkg.github.com/@wttj"
+    "registry": "https://npm.pkg.github.com/wttj"
   },
   "homepage": "https://xstyled.dev",
   "repository": "https://github.com/P1X3L/xstyled/tree/core-upgrade-styled-components-v6/packages/emotion",
@@ -43,8 +43,8 @@
     "@emotion/styled": "^11.0.0"
   },
   "dependencies": {
-    "@xstyled/core": "^3.8.0",
-    "@xstyled/system": "^3.8.0",
-    "@xstyled/util": "^3.7.0"
+    "@wttj/xstyled-core": "^3.8.0",
+    "@wttj/xstyled-system": "^3.8.0",
+    "@wttj/xstyled-util": "^3.7.0"
   }
 }

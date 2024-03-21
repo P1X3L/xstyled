@@ -30,7 +30,7 @@ export default (
         pragmatic,
         {
           export: 'jsx',
-          module: '@xstyled/emotion',
+          module: '@wttj/xstyled-emotion',
           import: pragmaName,
         },
       ],
@@ -42,7 +42,7 @@ export default (
           autoLabel,
           labelFormat,
           importMap,
-          instances: ['@xstyled/emotion', ...instances],
+          instances: ['@wttj/xstyled-emotion', ...instances],
           cssPropOptimization: true,
         },
       ],

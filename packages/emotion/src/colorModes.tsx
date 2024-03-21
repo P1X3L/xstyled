@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { ThemeContext, Global, ThemeProvider } from '@emotion/react'
-import { createColorModeProvider, createColorStyles } from '@xstyled/core'
+import { createColorModeProvider, createColorStyles } from '@wttj/xstyled-core'
 
 function ColorModeStyle({ targetSelector }: { targetSelector?: string }) {
   const colorModeStyles = React.useCallback(
@@ -20,4 +20,4 @@ export {
   useColorMode,
   getColorModeInitScriptElement,
   getColorModeInitScriptTag,
-} from '@xstyled/core'
+} from '@wttj/xstyled-core'

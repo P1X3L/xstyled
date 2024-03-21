@@ -26,8 +26,8 @@
     "@emotion/core": "^11.0.0",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
-    "@xstyled/emotion": "^3.8.0",
-    "@xstyled/styled-components": "^3.8.0",
+    "@wttj/xstyled-emotion": "^3.8.0",
+    "@wttj/xstyled-styled-components": "^3.8.0",
     "emotion-theming": "^11.0.0",
     "styled-components": "^5.3.6",
     "styled-system": "^5.1.5"

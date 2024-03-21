@@ -6,9 +6,9 @@ import {
   RuleSet,
   BaseObject,
 } from 'styled-components/dist/types'
-import { StyleGenerator } from '@xstyled/system'
-import { flattenStrings } from '@xstyled/util'
-import { createTransform } from '@xstyled/core'
+import { StyleGenerator } from '@wttj/xstyled-system'
+import { flattenStrings } from '@wttj/xstyled-util'
+import { createTransform } from '@wttj/xstyled-core'
 
 export type XCSSFunction = <Props extends object = BaseObject>(
   styles: Styles<NoInfer<Props>>,

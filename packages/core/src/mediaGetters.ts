@@ -1,4 +1,8 @@
-import { getScreens, getBreakpointMin, getBreakpointMax } from '@xstyled/system'
+import {
+  getScreens,
+  getBreakpointMin,
+  getBreakpointMax,
+} from '@wttj/xstyled-system'
 
 const getMediaWidth =
   (getBreakpointBound: any) => (value: any) => (props: any) => {

@@ -1,5 +1,5 @@
 import { createGlobalStyle as scCreateGlobalStyle } from 'styled-components'
-import { StyleGenerator } from '@xstyled/system'
+import { StyleGenerator } from '@wttj/xstyled-system'
 import { createCssFunction } from './createCssFunction'
 
 export type XCreateGlobalStyle = typeof scCreateGlobalStyle

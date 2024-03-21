@@ -51,7 +51,7 @@ const Button = ({ children }) => {
 **Using xstyled**
 
 ```jsx
-import { x } from '@xstyled/emotion'
+import { x } from '@wttj/xstyled-emotion'
 
 const Button = ({ children }) => (
   <x.button
@@ -118,7 +118,7 @@ const Button = ({ children }) => {
 
 ```js
 /** @jsx jsx */
-import { jsx } from '@xstyled/emotion'
+import { jsx } from '@wttj/xstyled-emotion'
 
 const Button = ({ children }) => {
   return (
@@ -169,7 +169,7 @@ const Button = ({ children }) => {
 **Using xstyled**
 
 ```jsx
-import { x } from '@xstyled/emotion'
+import { x } from '@wttj/xstyled-emotion'
 
 const Button = ({ children }) => {
   return <x.button w={{ _: 200, md: 300 }}>{children}</x.button>
@@ -178,17 +178,17 @@ const Button = ({ children }) => {
 
 ## Replacing Emotion by xstyled
 
-`@xstyled/emotion` is a replacement of `@emotion/react` and `@emotion/styled`. You can safely replace `@emotion/react` and `@emotion/styled` by `@xstyled/emotion`.
+`@wttj/xstyled-emotion` is a replacement of `@emotion/react` and `@emotion/styled`. You can safely replace `@emotion/react` and `@emotion/styled` by `@wttj/xstyled-emotion`.
 
 Once your code is using xstyled, you can start using [declarative components (`x.*`)](/docs/declarative-components/) and [enhanced styled components (`styled.*`)](/docs/styled-components/).
 
 ### JSX Pragma
 
-JSX Pragma is exposed in `@xstyled/emotion`:
+JSX Pragma is exposed in `@wttj/xstyled-emotion`:
 
 ```js
 /** @jsx jsx */
-import { jsx } from '@xstyled/emotion'
+import { jsx } from '@wttj/xstyled-emotion'
 
 const Button = ({ children }) => {
   return (
@@ -245,7 +245,7 @@ Note: `importMap` has some known issues coming from Emotion side
 
 ### Difference in `css` prop usage
 
-`css` prop with `@xstyled/emotion` is slightly different from `css` prop with `@emotion/react`.
+`css` prop with `@wttj/xstyled-emotion` is slightly different from `css` prop with `@emotion/react`.
 
 - `theme` is accessible as a destructured object `{ theme }`
 - When using a function, you have to wrap your style in `css`
@@ -273,7 +273,7 @@ const Button = ({ children }) => {
 
 ```jsx
 /** @jsx jsx */
-import { jsx } from '@xstyled/emotion'
+import { jsx } from '@wttj/xstyled-emotion'
 
 const Button = ({ children }) => {
   return (

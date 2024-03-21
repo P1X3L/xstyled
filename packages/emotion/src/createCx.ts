@@ -1,5 +1,5 @@
-import { cascade, flatten, string } from '@xstyled/util'
-import { Theme, StyleGenerator } from '@xstyled/system'
+import { cascade, flatten, string } from '@wttj/xstyled-util'
+import { Theme, StyleGenerator } from '@wttj/xstyled-system'
 import { createCssFunction, SerializedStylesFn } from './createCssFunction'
 
 export interface Cx {

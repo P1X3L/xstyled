@@ -1,4 +1,4 @@
-import { th } from '@xstyled/system'
+import { th } from '@wttj/xstyled-system'
 import {
   toCustomPropertiesReferences,
   toCustomPropertiesDeclarations,

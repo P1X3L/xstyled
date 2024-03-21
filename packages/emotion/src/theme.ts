@@ -1,6 +1,6 @@
 import { useTheme } from '@emotion/react'
-import { createUseGetter } from '@xstyled/core'
-import { th } from '@xstyled/system'
+import { createUseGetter } from '@wttj/xstyled-core'
+import { th } from '@wttj/xstyled-system'
 
 export { useTheme }
 
