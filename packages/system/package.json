@@ -1,7 +1,7 @@
 {
   "name": "@wttj/xstyled-system",
   "description": "xstyled system utilities.",
-  "version": "3.8.0",
+  "version": "4.0.0",
   "keywords": [
     "emotion",
     "styled-components",
@@ -40,7 +40,7 @@
     "registry": "https://npm.pkg.github.com/wttj"
   },
   "dependencies": {
-    "@wttj/xstyled-util": "^3.7.0",
+    "@wttj/xstyled-util": "^4.0.0",
     "csstype": "^3.1.1"
   }
 }

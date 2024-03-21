@@ -1,7 +1,7 @@
 {
   "name": "@wttj/xstyled-prop-types",
   "description": "Generate prop-types from xstyled utilities.",
-  "version": "3.7.0",
+  "version": "4.0.0",
   "keywords": [
     "emotion",
     "styled-components",
