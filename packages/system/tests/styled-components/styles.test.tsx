@@ -2,8 +2,18 @@ import * as React from 'react'
 import 'jest-styled-components'
 import '@testing-library/jest-dom/extend-expect'
 import { render, cleanup } from '@testing-library/react'
-import styled from 'styled-components'
+import styled, { StyleSheetManager } from 'styled-components'
+import isPropValid from '@emotion/is-prop-valid'
 import * as styles from '../../src'
+
+function shouldForwardProp(propName, target) {
+  if (typeof target === 'string') {
+    // For HTML elements, forward the prop if it is a valid HTML attribute
+    return isPropValid(propName)
+  }
+  // For other elements, forward all props
+  return true
+}
 
 afterEach(cleanup)
 
@@ -632,7 +642,9 @@ describe('styles', () => {
         it('supports simple value', () => {
           const props = { [name]: value }
           const { container } = render(
-            <Dummy theme={(config as any).theme} {...props} />,
+            <StyleSheetManager shouldForwardProp={shouldForwardProp}>
+              <Dummy theme={(config as any).theme} {...props} />,
+            </StyleSheetManager>,
           )
           const styleRules = Array.isArray(config.styleRule)
             ? config.styleRule

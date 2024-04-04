@@ -6334,22 +6334,22 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@wttj/xstyled-core@^3.8.0, @wttj/xstyled-core@workspace:packages/core":
+"@wttj/xstyled-core@^4.0.0, @wttj/xstyled-core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "@wttj/xstyled-core@workspace:packages/core"
   dependencies:
-    "@wttj/xstyled-system": ^3.8.0
-    "@wttj/xstyled-util": ^3.7.0
+    "@wttj/xstyled-system": ^4.0.0
+    "@wttj/xstyled-util": ^4.0.0
   languageName: unknown
   linkType: soft
 
-"@wttj/xstyled-emotion@^3.8.0, @wttj/xstyled-emotion@workspace:packages/emotion":
+"@wttj/xstyled-emotion@^4.0.0, @wttj/xstyled-emotion@workspace:packages/emotion":
   version: 0.0.0-use.local
   resolution: "@wttj/xstyled-emotion@workspace:packages/emotion"
   dependencies:
-    "@wttj/xstyled-core": ^3.8.0
-    "@wttj/xstyled-system": ^3.8.0
-    "@wttj/xstyled-util": ^3.7.0
+    "@wttj/xstyled-core": ^4.0.0
+    "@wttj/xstyled-system": ^4.0.0
+    "@wttj/xstyled-util": ^4.0.0
   peerDependencies:
     "@emotion/react": ^11.0.0
     "@emotion/styled": ^11.0.0
@@ -6364,28 +6364,28 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@wttj/xstyled-styled-components@^3.8.0, @wttj/xstyled-styled-components@workspace:packages/styled-components":
+"@wttj/xstyled-styled-components@^4.0.0, @wttj/xstyled-styled-components@workspace:packages/styled-components":
   version: 0.0.0-use.local
   resolution: "@wttj/xstyled-styled-components@workspace:packages/styled-components"
   dependencies:
-    "@wttj/xstyled-core": ^3.8.0
-    "@wttj/xstyled-system": ^3.8.0
-    "@wttj/xstyled-util": ^3.7.0
+    "@wttj/xstyled-core": ^4.0.0
+    "@wttj/xstyled-system": ^4.0.0
+    "@wttj/xstyled-util": ^4.0.0
   peerDependencies:
     styled-components: ^4.0.0 || ^5.0.0 || ^6.0.0
   languageName: unknown
   linkType: soft
 
-"@wttj/xstyled-system@^3.8.0, @wttj/xstyled-system@workspace:packages/system":
+"@wttj/xstyled-system@^4.0.0, @wttj/xstyled-system@workspace:packages/system":
   version: 0.0.0-use.local
   resolution: "@wttj/xstyled-system@workspace:packages/system"
   dependencies:
-    "@wttj/xstyled-util": ^3.7.0
+    "@wttj/xstyled-util": ^4.0.0
     csstype: ^3.1.1
   languageName: unknown
   linkType: soft
 
-"@wttj/xstyled-util@^3.7.0, @wttj/xstyled-util@workspace:packages/util":
+"@wttj/xstyled-util@^4.0.0, @wttj/xstyled-util@workspace:packages/util":
   version: 0.0.0-use.local
   resolution: "@wttj/xstyled-util@workspace:packages/util"
   languageName: unknown
@@ -6401,8 +6401,8 @@ __metadata:
     "@emotion/core": ^11.0.0
     "@emotion/react": ^11.10.4
     "@emotion/styled": ^11.10.4
-    "@wttj/xstyled-emotion": ^3.8.0
-    "@wttj/xstyled-styled-components": ^3.8.0
+    "@wttj/xstyled-emotion": ^4.0.0
+    "@wttj/xstyled-styled-components": ^4.0.0
     babel-loader: ^8.2.5
     benchmark: ^2.1.4
     emotion-theming: ^11.0.0
